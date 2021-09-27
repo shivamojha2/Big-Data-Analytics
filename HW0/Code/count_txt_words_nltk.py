@@ -28,6 +28,7 @@ words_kv = words_filter.map(lambda x: (x,1))
 counts = words_kv.reduceByKey(lambda v1, v2: v1 + v2).sortBy(lambda x: -x[1])
 print(counts.take(10))
 
+# Alternate way
 """
 if __name__ == '__main__':
     input_uri = "gs://big-data-eecs6893/input/shakes.txt"
